@@ -10,7 +10,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        lightHover: "#fcf4ff", // your hover light color
+        lightHover: "#fcf4ff",
         darkHover: "#2a004a",
         darkTheme: "#11001F",
       },
@@ -21,6 +21,9 @@ module.exports = {
       boxShadow: {
         black: "4px 4px 0 #000",
         white: "4px 4px 0 #fff",
+      },
+      gridTemplateColumns: {
+        autp: "repeat(auto-fit,minmax(250px,1fr))",
       },
     },
   },
