@@ -34,10 +34,7 @@ const Services = () => {
       
       
       className="text-center max-w-2xl mx-auto mt-6 mb-12 font-Ovo">
-        I am a Frontend Developer skilled in JS, React, Next.js, HTML, CSS,
-        Tailwind CSS and Node.js with practical experience from hands-on
-        projects. Seeking a front-end role or internship to apply technical
-        skills and grow as a web developer.
+        
       </motion.p>
 
       <motion.div 
