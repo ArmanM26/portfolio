@@ -1,23 +1,55 @@
 import { assets, serviceData } from '@/assets/assets'
 import React from 'react'
 import Image from 'next/image'
+import { motion } from "motion/react";
 
 const Services = () => {
   return (
-    <div id="services" className="w-full px-[12%] py-10 scroll-mt-10">
-      <h4 className="text-center mb-2 text-lg font-Ovo">What I offer</h4>
-      <h2 className="text-center text-5xl font-Ovo">My Services</h2>
+    <motion.div 
+    initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1}}
+    
+    
+    id="services" className="w-full px-[12%] py-10 scroll-mt-10">
+      <motion.h4
+      initial={{ y:-20,opacity: 0 }}
+        whileInView={{ y: 0,opacity:1 }}
+        transition={{ delay: 0.3 , duration:0.5}}
+      
+      
+      className="text-center mb-2 text-lg font-Ovo">What I offer</motion.h4>
+      <motion.h2
+            initial={{ y:-20,opacity: 0 }}
+        whileInView={{ y: 0,opacity:1 }}
+        transition={{ delay: 0.5 , duration:0.5}}
+      
+      
+      className="text-center text-5xl font-Ovo">My Services</motion.h2>
 
-      <p className="text-center max-w-2xl mx-auto mt-6 mb-12 font-Ovo">
+      <motion.p
+            initial={{opacity: 0 }}
+        whileInView={{opacity:1 }}
+        transition={{ delay: 0.7 , duration:0.5}}
+      
+      
+      className="text-center max-w-2xl mx-auto mt-6 mb-12 font-Ovo">
         I am a Frontend Developer skilled in JS, React, Next.js, HTML, CSS,
         Tailwind CSS and Node.js with practical experience from hands-on
         projects. Seeking a front-end role or internship to apply technical
         skills and grow as a web developer.
-      </p>
+      </motion.p>
 
-      <div className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))]  gap-6 my-10">
+      <motion.div 
+      initial={{opacity: 0 }}
+        whileInView={{opacity:1 }}
+        transition={{ delay: 0.9 , duration:0.6}}
+      
+      
+      className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))]  gap-6 my-10">
         {serviceData.map(({ icon, title, description, link }, index) => (
-          <div
+          <motion.div
+          whileHover={{scale:1.05}}
             key={index}
             className="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-[4px_4px_0_#000] cursor-pointer hover:bg-[#fcf4ff] hover:-translate-y-1 duration-500"
           >
@@ -32,10 +64,10 @@ const Services = () => {
                 className="w-4"
               />
             </a>
-          </div>
+          </motion.div>
         ))}
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   )
 }
 
