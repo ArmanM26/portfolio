@@ -34,7 +34,6 @@ const Services = () => {
       
       
       className="text-center max-w-2xl mx-auto mt-6 mb-12 font-Ovo">
-        
       </motion.p>
 
       <motion.div 
